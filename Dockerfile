@@ -1,12 +1,11 @@
-# https://hub.docker.com/r/adoptopenjdk/openjdk11
-FROM adoptopenjdk/openjdk11:jdk-11.0.5_10-alpine
+FROM eclipse-temurin:21-jdk
 
-LABEL maintainer="matankdr@gmail.com"
+LABEL maintainer="pascal22p@parois.net"
 
 RUN set -x \
   && apk --update add --no-cache --virtual .build-deps curl \
-  && SBT_VER="1.3.8" \
-  && ESUM="27b2ed49758011fefc1bd05e1f4156544d60673e082277186fdd33b6f55d995d" \
+  && SBT_VER="1.10.1" \
+  && ESUM="47fe98ce9498ee46e69f22672f3c12234cbe7e719e764410a13e58b725d659f3" \
   # && SBT_URL="https://piccolo.link/sbt-${SBT_VER}.tgz" \
   && SBT_URL="https://github.com/sbt/sbt/releases/download/v${SBT_VER}/sbt-${SBT_VER}.tgz" \
   && apk add shadow \
