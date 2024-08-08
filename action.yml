@@ -1,6 +1,6 @@
 # action.yml
 name: 'Scala SBT Action'
-author: 'Matan Keidar <matankdr@gmail.com>'
+author: 'Pascal Parois <pascal22p@parois.net>'
 description: 'SBT build tool action with docker'
 inputs:
   command:  # id of input
