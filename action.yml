@@ -1,5 +1,5 @@
 # action.yml
-name: 'Scala SBT Action'
+name: 'pascal22p/Scala SBT Action'
 author: 'Pascal Parois <pascal22p@parois.net>'
 description: 'SBT build tool action with docker'
 inputs:
