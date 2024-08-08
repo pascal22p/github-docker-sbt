@@ -16,7 +16,7 @@ else
   DOCKER_REGISTRY=$4
   echo "Running docker login"
   [ -z "$DOCKER_REGISTRY" ] || echo "Using custom registry: ${DOCKER_REGISTRY}"
-  echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin ${DOCKER_REGISTRY}
+  docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
 fi
 
 echo "Running command in ${WORKING_DIR}"
